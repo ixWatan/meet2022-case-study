@@ -1,6 +1,9 @@
-# meet2022-case-
+# Hello and welcome to our case study repo :)
 
-**Hello and welcome to our case study repo :)**
+### OUR FELLOW LOVELY TEAM MEMBERS:
+- Joleen
+- Maya
+- Watan
+- Yuval
 
-*Our Team Lovely team members:
-*
+### **Hilma 1 Problem**
