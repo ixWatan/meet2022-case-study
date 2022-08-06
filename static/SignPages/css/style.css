@@ -134,8 +134,7 @@ h2 {
   color: #fff; }
 
 .control--checkbox .control__indicator:after {
-  top: 50%;
-  left: 50%;
+  
   margin-top: -1px;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
