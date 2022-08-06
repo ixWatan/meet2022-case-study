@@ -37,7 +37,7 @@ db = firebase.database()
 @app.route('/signup', methods = ["GET", "POST"])
 def home():
   error=""
-  if request.method== "POST":
+  if request.method == "POST":
     email = request.form["email"]
     password = request.form["password"]
     confpass = request.form["confpassword"]
@@ -45,7 +45,7 @@ def home():
     staff = request.form["staff"]
     gender = request.form["gender"]
     did = request.form['id']
-
+    
     try:
       if password == confpass:
         login_session['user'] = auth.create_user_with_email_and_password(email, password)

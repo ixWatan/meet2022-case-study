@@ -30,7 +30,7 @@
           <div class="col-md-7 py-5">
             <h3>Register to Hospikol Staff</h3>
             <p class="mb-4">Manage all your patients from one place</p>
-            <form action="/" method="post">
+            <form action="/signup" method="post">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group first">
@@ -65,8 +65,8 @@
                             </div>
                             <input type="hidden" name="staff">
                             <ul class="dropdown-menu">
-                              <li id="male">Doctor</li>
-                              <li id="female">Nurse</li>
+                              <li id="Doctor">Doctor</li>
+                              <li id="Nurse">Nurse</li>
                             </ul>
                           </div>
                       <span class="msg"></span>
@@ -254,6 +254,7 @@ $('.dropdown-menu li').click(function () {
       msg = '<span class="msg">Hidden input value: ';
   
 }); 
+ 
 </script>
   </body>
 </html>
