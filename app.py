@@ -71,6 +71,8 @@ def form():
 def done():
   if request.method == "POST":
     patientName =  request.form['patient-name']
+    age = request.form['age']
+    
   return render_template('done.html')
 
 @app.route('/', methods = ["GET","POST"])
