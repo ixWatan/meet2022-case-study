@@ -70,7 +70,7 @@ def form():
 @app.route('/done', methods = ["GET", "POST"])
 def done():
   if request.method == "POST":
-    request.form['patient-name']
+    patientName =  request.form['patient-name']
   return render_template('done.html')
 
 @app.route('/', methods = ["GET","POST"])
