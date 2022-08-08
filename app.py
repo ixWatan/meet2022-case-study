@@ -67,6 +67,12 @@ def home():
 def form():
   return render_template('main.html')
 
+@app.route('/done', methods = ["GET", "POST"])
+def done():
+  if request.method == "POST":
+    request.form['patient-name']
+  return render_template('done.html')
+
 @app.route('/', methods = ["GET","POST"])
 def login():
   error = ""
