@@ -19,47 +19,47 @@
   <body>
     <div class="container">  
     <form class="contact" action="/form" method="post">
-      <h3>Patient Info</h3>
+      <h3 style="font-size:  20px;"><strong>Patient Info</strong></h3>
       
-      <div class="col50 colleft">
+      <div style="font-size:  16px;"class="col50 colleft">
         <div class="col50 colleft">
           <div class="wd50">
-            <label name="">Patient name (Optional)</label>
-            <input placeholder="Patient name"  type="text" autofocus>
+            <label name="">Blood type</label>
+            <input name = "blood" placeholder="Blood type"  type="text" autofocus>
           </div>
           <div class="wd50">
             <label name="">Weight</label>
-            <input placeholder="Weight (kg)" type="text">
+            <input name = "weight" placeholder="Weight (kg)" type="text">
           </div>
 
            <div class="wd50">
             <label name="">Illness idnetified</label>
-            <input placeholder="Illness" type="text">
+            <input name = "illness" placeholder="Illness" type="text">
           </div>
 
         </div>
         <div class="col50 colright">
           <div class="wd50">
             <label name="">Age</label>
-            <input placeholder="Age" type="text" required>
+            <input name = "age" placeholder="Age" type="text" required>
           </div>
 
           <div class="wd50">
             <label name="">Height</label>
-            <input placeholder="Height (cm)" type="text">
+            <input name = "height" placeholder="Height (cm)" type="text">
           </div>
             <div class="wd50">
             <label name="">Time in hospital</label>
-            <input placeholder="Time spent in hospital" type="text">
+            <input name = "timeinhos" placeholder="Time spent in hospital" type="text">
           </div>
         </div>
       </div>
       
-      <div class="col50 colright">
+      <div style="font-size:  16px;"class="col50 colright">
         <div class="col50 colleft">
              <div class="wd50">
-            <label name="">Public / Private ?</label>
-            <select>
+            <label name="">Public / Private</label>
+            <select name = "pub/priv">
               <option value="private">Private</option>
               <option value="public">Public</option>
             </select> 
@@ -67,29 +67,29 @@
           
           <div class="wd50">
             <label name="">Gender</label>
-            <select>
-              <option value="m">Male</option>
-              <option value="f">Female</option>
-              <option value="l">Other</option>
+            <select name = "gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
             </select> 
           </div>
-               <div style="padding-top: 5px;" class="wd50">
+               <div style="padding-bottom: 5px;" class="wd50">
             <label name="">Medicine given</label>
-            <input placeholder="Medicine" type="text">
+            <input name = "medicine" placeholder="Medicine" type="text" required>
           </div>
         </div>
         <div class="col50 colright">
           <div class="wd50">
-            <label name="">Hospital Visited</label>
-            <input placeholder="Hospital Visited" type="text" required>
+            <label name="">Hospital Treated</label>
+            <input name = "hospital"placeholder="Hospital Treated" type="text" required>
           </div>
       
            <div class="wd50">
             <label name="">Doctor consulted</label>
-            <input placeholder="Doctor consulted" type="text" required>
+            <input name = "doctor" placeholder="Doctor consulted" type="text" required>
           </div>
                <div class="wd50">
-            <label name="">Genitic Illness from before?</label>
+            <label name="">Genitic Illness before?</label>
             <input placeholder="Genitic Illness " type="text">
           </div>
         </div>
@@ -98,137 +98,92 @@
       <div class="wd100"><hr></div>
       
       <div class="wd100">
-        <label name="">Reason for Not Taking Treatment Or Giving less rating with DR experience</label>
-        <p><strong>GRID Multiple selection</strong></p>
+        
+        <h4 style="font-size:  20px;"><strong>Treatment Info</strong></h4>
       </div>
 
-      <div class="wd100 question-checkbox">
+      <div style="font-size:  15px;" class="wd100 question-checkbox">
         <div class="col50 colleft">
-          <p>Were there any symptoms?</p>
-          <label name=""><input type="checkbox" value=""> Puking</label>
-          <label name=""><input type="checkbox" value=""> Headache</label>
-          <label name=""><input type="checkbox" value=""> Sleeping Issues</label>
-          <label name=""><input type="checkbox" value=""> Daiziness</label>
-          <label name=""><input type="checkbox" value=""> Dry Mouth</label>
-          <label name=""><input type="checkbox" value=""> Drowsiness</label>
-          <label name=""><input type="checkbox" value=""> Diarrhea</label>
-          <label name=""><input type="checkbox" value=""> Skin rash or dermatitis</label>
-          <label name=""><input type="checkbox" value=""> Insomnia</label>
-          <label name=""><input type="checkbox" value=""> Nausea</label>
-          <label name=""><input type="checkbox" value=""> dry, sore skin</label>
-          <label name=""><input type="checkbox" value=""> Nerve damage</label>
-          <label name=""><input type="checkbox" value=""> Loss of function</label>
-          <label name=""><input type="checkbox" value=""> Inflammation</label>
+          <p>Were there any symptoms before the treatment?</p>
+          <label name=""><input type="checkbox" name = "one" value="Puking"> Puking</label>
+          <label name=""><input type="checkbox" name = "two" value="Headache"> Headache</label>
+          <label name=""><input type="checkbox" name = "three" value="Sleeping Issues"> Sleeping Issues</label>
+          <label name=""><input type="checkbox" name = "four" value="Diziness"> Diziness</label>
+          <label name=""><input type="checkbox" name = "five" value="Dry Mouth"> Dry Mouth</label>
+          <label name=""><input type="checkbox" name = "six" value="Drowsiness"> Drowsiness</label>
+          <label name=""><input type="checkbox" name = "seven" value="Diarrhea"> Diarrhea</label>
+          <label name=""><input type="checkbox" name = "eight" value="Skin Rash"> Skin rash or dermatitis</label>
+          <label name=""><input type="checkbox" name = "nine" value="Insomnia"> Insomnia</label>
+          <label name=""><input type="checkbox" name = "ten" value="Nausea"> Nausea</label>
+          <label name=""><input type="checkbox" name = "eleven" value="Sore Skin"> dry, sore skin</label>
+          <label name=""><input type="checkbox" name = "twelve" value="Nerve Damage"> Nerve damage</label>
+          <label name=""><input type="checkbox" name = "thirteen" value="Loss of Function"> Loss of function</label>
+          <label name=""><input type="checkbox" name = "fourteen" value="Inflammation"> Inflammation</label>
 
+          <p>Types of treatment</p>
+          <label name=""><input type="checkbox" value="Surgery" name = "surgery"> Surgery</label>
+          <label name=""><input type="checkbox" value="Medicine" name = "medicinee"> Medicine</label>
+          <label name=""><input type="checkbox" value="Physotherapy" name = "physotherapy"> Physotherapy</label>
+          <label name=""><input type="checkbox" value="Hydrotrapia" name = "hydro"> Hydrotrapia</label>
+          <label name=""><input type="checkbox" value="Therapy" name = "therapy"> Therapy</label>
+          <label name=""><input type="checkbox" value="Chemotherapy" name = "chemotherapy"> Chemotherapy</label>
+          <label name=""><input type="checkbox" value="Radiation Therapies" name = "radiation"> Radiation Therapies</label>
+          <label name=""><input type="checkbox" value="Biological Therapy" name = "biological"> Biological Therapy</label>
+          <label name=""><input type="checkbox" value="Hormonal Therapy" name = "hormonal"> Hormonal Therapy</label>
+          <label name=""><input type="checkbox" value="Targeted Therapies" name = "targeted"> Targeted Therapies</label>
 
+          <p>Was anesthetic used?</p>
+          <label name=""><input type="checkbox" value=""> Yes</label>
+          <label name=""><input type="checkbox" value=""> No</label>
 
+          <p>Types of anesthetic</p>
+          <label name=""><input type="checkbox" value="General anesthesia" name = "general"/> General anesthesia</label>
+          <label name=""><input type="checkbox" value="Regional anesthesia" name="regional"/> Regional anesthesia</label>
+          <label name=""><input type="checkbox" value="Sedation" name = "sedation"/> Sedation</label>
+          <label name=""><input type="checkbox" value="Local anesthesia" name = "local"/> Local ansethesia</label>
 
-
-          <p>Not sufficient time</p>
-          <label name=""><input type="checkbox" value=""> Doctor</label>
-          <label name=""><input type="checkbox" value=""> Clinic/PRO</label>
-
-          <p>Was pushy/Only focused on price</p>
-          <label name=""><input type="checkbox" value=""> Doctor</label>
-          <label name=""><input type="checkbox" value=""> Clinic/PRO</label>
-
-          <p>No assurance was given</p>
-          <label name=""><input type="checkbox" value=""> Doctor</label>
-          <label name=""><input type="checkbox" value=""> Clinic/PRO</label>
-
-          <p>Long term Packages</p>
-          <label name=""><input type="checkbox" value=""> Treatment Duration</label>
-
-          <p>Dint allow to meet Doctor</p>
-          <label name=""><input type="checkbox" value=""> Clinic/PRO</label>
-
-          <p>Washroom</p>
-          <label name=""><input type="checkbox" value=""> Hygiene</label>
-
-          <p>Treatment machines not clean</p>
-          <label name=""><input type="checkbox" value=""> Hygiene</label>
-
-          <p>No proper check up by</p>
-          <label name=""><input type="checkbox" value=""> Doctor</label>
         </div>
 
-        <div class="col50 colright">
-          <p>No option for part payment given</p>
-          <label name=""><input type="checkbox" value=""> Price</label>
-
-          <p>Questions not answered/confident</p>
-          <label name=""><input type="checkbox" value=""> Doctor</label>
-          <label name=""><input type="checkbox" value=""> Clinic/PRO</label>
-
-          <p>Rude</p>
-          <label name=""><input type="checkbox" value=""> Doctor</label>
-          <label name=""><input type="checkbox" value=""> Clinic/PRO</label>
-
-          <p>Not Satisfied in general</p>
-          <label name=""><input type="checkbox" value=""> Doctor</label>
-          <label name=""><input type="checkbox" value=""> Clinic/PRO</label>
-
-          <p>Aliment not treated at DRB</p>
-          <label name=""><input type="checkbox" value=""> Treatment Duration</label>
-
-          <p>Give medicines for 2 days &amp; Ask to come later</p>
-          <label name=""><input type="checkbox" value=""> Doctor</label>
-          <label name=""><input type="checkbox" value=""> Clinic/PRO</label>
-
-          <p>Unprofessional Behavior/getup</p>
-          <label name=""><input type="checkbox" value=""> Doctor</label>
-          <label name=""><input type="checkbox" value=""> Clinic/PRO</label>
-
-          <p>Asked to Pay today or No discount</p>
-          <label name=""><input type="checkbox" value=""> Doctor</label>
-          <label name=""><input type="checkbox" value=""> Clinic/PRO</label>
-          <label name=""><input type="checkbox" value=""> Discount</label>
+        <div style="font-size:  15px;" class="col50 colright">
+          <p>Were there any symptoms after the treatment?</p>
+          <label name=""><input type="checkbox" name = "onee" value="Puking"> Puking</label>
+          <label name=""><input type="checkbox" name = "twoe" value="Headache"> Headache</label>
+          <label name=""><input type="checkbox" name = "threee" value="Sleeping Issues"> Sleeping Issues</label>
+          <label name=""><input type="checkbox" name = "foure" value="Diziness"> Diziness</label>
+          <label name=""><input type="checkbox" name = "fivee" value="Dry Mouth"> Dry Mouth</label>
+          <label name=""><input type="checkbox" name = "sixe" value="Drowsiness"> Drowsiness</label>
+          <label name=""><input type="checkbox" name = "sevene" value="Diarrhea"> Diarrhea</label>
+          <label name=""><input type="checkbox" name = "eighte" value="Skin Rash"> Skin rash or dermatitis</label>
+          <label name=""><input type="checkbox" name = "ninee" value="Insomnia"> Insomnia</label>
+          <label name=""><input type="checkbox" name = "tene" value="Nausea"> Nausea</label>
+          <label name=""><input type="checkbox" name = "elevene" value="Sore Skin"> dry, sore skin</label>
+          <label name=""><input type="checkbox" name = "twelvee" value="Nerve Damage"> Nerve damage</label>
+          <label name=""><input type="checkbox" name = "thirteene" value="Loss of Function"> Loss of function</label>
+          <label name=""><input type="checkbox" name = "fourteene" value="Inflammation"> Inflammation</label>
+ 
         </div>
       </div>
 
-      <div class="col50 colleft">
-        <div class="wd100">
-          <label name="">Rate Overall experience (5 being Excellent &amp; 1 being lowest )</label>
-          <select>
-            <option value=" ">option 1</option>
-            <option value=" ">option 2</option>
-            <option value=" ">option 3</option>
-            <option value=" ">option 4</option>
-          </select> 
-        </div>
-      </div>
-
-      <div class="col50 colright">
-        <div class="wd100">
-          <label name="">Sir/ Mam if we can find a solution for your concern would you be "ok" to receive a call back? (in case of any concerns raised) </label>
-          <select>
-            <option value=" ">option 1</option>
-            <option value=" ">option 2</option>
-            <option value=" ">option 3</option>
-            <option value=" ">option 4</option>
-          </select> 
-        </div>
-      </div>
       
       <div class="wd100"><hr></div>
       
       <div class="col50 colleft">
         <div class="wd100">
-          <label name="">Doctor quote (to be filled only if required)</label>
-          <textarea placeholder="Insert text here ..." required></textarea>
+          <label name="">Doctor's Signature</label>
+          <textarea name = "signature" placeholder="Insert text here ..." required></textarea>
         </div>
       </div>
 
       <div class="col50 colright">
         <div class="wd100">
-          <label name="">Patient can pay ( to be filled only if required)</label>
-          <textarea placeholder="Insert text here ..." required></textarea>
+          <label name="">Total Cost of Treatment</label>
+          <textarea name = "cost" value = "" placeholder="Insert text here ..." required></textarea>
         </div>
       </div>
 
       <div class="wd100">
         <label name="">Notes</label>
-        <textarea placeholder="Insert text here ..." required></textarea>
+        <textarea name = "notes" value = "" placeholder="Insert text here ..." required></textarea>
       </div>
       
       <div class="wd100">

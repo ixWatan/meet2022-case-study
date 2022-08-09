@@ -39,7 +39,7 @@ def home():
   error=""
   if request.method == "POST":
     email = request.form["email"]
-    password = request.form["password"]
+    password = request.form["password"] 
     confpass = request.form["confpassword"]
     fname = request.form["fname"]
     staff = request.form["staff"]
@@ -65,6 +65,232 @@ def home():
 
 @app.route('/form', methods = ["GET", "POST"])
 def form():
+
+  if request.method == "POST":
+
+    if request.form.get('pub/priv') == "private":
+      blood = request.form['blood']
+      weight = request.form['weight']
+      illness = request.form['illness']
+      age = request.form['age']
+      height = request.form['height']
+      timeinhos = request.form['timeinhos']
+      gender = request.form.get('gender')
+      medicine = request.form['medicine']
+      hospital = request.form['hospital']
+      doctor = request.form['doctor']
+      anesthesiatypes = []
+      if 'general' in request.form:
+        anesthesiatypes.append(request.form['general'])
+      if 'regional' in request.form:
+        anesthesiatypes.append(request.form['regional'])
+      if 'sedation' in request.form:
+        anesthesiatypes.append(request.form['sedation'])
+      if 'local' in request.form:
+        anesthesiatypes.append(request.form['local'])
+
+      treatmenttype = []
+      if 'surgery' in request.form:
+        treatmenttype.append(request.form['surgery'])
+      if 'medicinee' in request.form:
+        treatmenttype.append(request.form['medicinee'])
+      if 'physotherapy' in request.form:
+        treatmenttype.append(request.form['physotherapy'])
+      if 'hydro' in request.form:
+        treatmenttype.append(request.form['hydro'])
+      if 'therapy' in request.form:
+        treatmenttype.append(request.form['therapy'])
+      if 'chemotherapy' in request.form:
+        treatmenttype.append(request.form['chemotherapy'])
+      if 'radiation' in request.form:
+        treatmenttype.append(request.form['radiation'])
+      if 'biological' in request.form:
+        treatmenttype.append(request.form['biological'])
+      if 'hormonal' in request.form:
+        treatmenttype.append(request.form['hormonal'])
+      if 'targeted' in request.form:
+        treatmenttype.append(request.form['targeted'])
+
+
+      symptomsafter = []
+      if 'onee' in request.form:
+        symptomsafter.append(request.form['onee'])
+      if 'twoe' in request.form:
+        symptomsafter.append(request.form['twoe'])
+      if 'threee' in request.form:
+        symptomsafter.append(request.form['threee'])
+      if 'foure' in request.form:
+        symptomsafter.append(request.form['foure'])
+      if 'fivee' in request.form:
+        symptomsafter.append(request.form['fivee'])
+      if 'sixe' in request.form:
+        symptomsafter.append(request.form['sixe'])
+      if 'sevene' in request.form:
+        symptomsafter.append(request.form['sevene'])
+      if 'eighte' in request.form:
+        symptomsafter.append(request.form['eighte'])
+      if 'ninee' in request.form:
+        symptomsafter.append(request.form['ninee'])
+      if 'tene' in request.form:
+        symptomsafter.append(request.form['tene'])
+      if 'elevene' in request.form:
+        symptomsafter.append(request.form['elevene'])
+      if 'twelvee' in request.form:
+        symptomsafter.append(request.form['twelvee'])
+      if 'thirteene' in request.form:
+        symptomsafter.append(request.form['thirteene'])
+      if 'fourteene' in request.form:
+        symptomsafter.append(request.form['fourteene'])
+
+      symptomsbefore = []
+      if 'one' in request.form:
+        symptomsbefore.append(request.form['one'])
+      if 'two' in request.form:
+        symptomsbefore.append(request.form['two'])
+      if 'three' in request.form:
+        symptomsbefore.append(request.form['three'])
+      if 'four' in request.form:
+        symptomsbefore.append(request.form['four'])
+      if 'five' in request.form:
+        symptomsbefore.append(request.form['five'])
+      if 'six' in request.form:
+        symptomsbefore.append(request.form['six'])
+      if 'seven' in request.form:
+        symptomsbefore.append(request.form['seven'])
+      if 'eight' in request.form:
+        symptomsbefore.append(request.form['eight'])
+      if 'nine' in request.form:
+        symptomsbefore.append(request.form['nine'])
+      if 'ten' in request.form:
+        symptomsbefore.append(request.form['ten'])
+      if 'eleven' in request.form:
+        symptomsbefore.append(request.form['eleven'])
+      if 'twelve' in request.form:
+        symptomsbefore.append(request.form['twelve'])
+      if 'thirteen' in request.form:
+        symptomsbefore.append(request.form['thirteen'])
+      if 'fourteen' in request.form:
+        symptomsbefore.append(request.form['fourteen'])
+
+      notes = request.form["notes"]
+      cost = request.form["cost"]
+
+      Info = {"age":age, "height":height, "gender": gender, "blood":blood, "specifics":{"illness":illness, "timeinhos":timeinhos, "medicine":medicine, "symptomsbefore":symptomsbefore, "symptomsafter":symptomsafter, "treatmenttype":treatmenttype, "anesthesiatypes":anesthesiatypes, "Doctor's Notes":notes, "Total Cost":cost}}
+      db.child("Private").child(hospital).child("Treatments").push(Info)
+      return redirect(url_for("login"))
+
+    if request.form.get('pub/priv') == "public":
+      blood = request.form['blood']
+      weight = request.form['weight']
+      illness = request.form['illness']
+      age = request.form['age']
+      height = request.form['height']
+      timeinhos = request.form['timeinhos']
+      gender = request.form.get('gender')
+      medicine = request.form['medicine']
+      hospital = request.form['hospital']
+      doctor = request.form['doctor']
+      anesthesiatypes = []
+      if 'general' in request.form:
+        anesthesiatypes.append(request.form['general'])
+      if 'regional' in request.form:
+        anesthesiatypes.append(request.form['regional'])
+      if 'sedation' in request.form:
+        anesthesiatypes.append(request.form['sedation'])
+      if 'local' in request.form:
+        anesthesiatypes.append(request.form['local'])
+
+      treatmenttype = []
+      if 'surgery' in request.form:
+        treatmenttype.append(request.form['surgery'])
+      if 'medicinee' in request.form:
+        treatmenttype.append(request.form['medicinee'])
+      if 'physotherapy' in request.form:
+        treatmenttype.append(request.form['physotherapy'])
+      if 'hydro' in request.form:
+        treatmenttype.append(request.form['hydro'])
+      if 'therapy' in request.form:
+        treatmenttype.append(request.form['therapy'])
+      if 'chemotherapy' in request.form:
+        treatmenttype.append(request.form['chemotherapy'])
+      if 'radiation' in request.form:
+        treatmenttype.append(request.form['radiation'])
+      if 'biological' in request.form:
+        treatmenttype.append(request.form['biological'])
+      if 'hormonal' in request.form:
+        treatmenttype.append(request.form['hormonal'])
+      if 'targeted' in request.form:
+        treatmenttype.append(request.form['targeted'])
+
+
+      symptomsafter = []
+      if 'onee' in request.form:
+        symptomsafter.append(request.form['onee'])
+      if 'twoe' in request.form:
+        symptomsafter.append(request.form['twoe'])
+      if 'threee' in request.form:
+        symptomsafter.append(request.form['threee'])
+      if 'foure' in request.form:
+        symptomsafter.append(request.form['foure'])
+      if 'fivee' in request.form:
+        symptomsafter.append(request.form['fivee'])
+      if 'sixe' in request.form:
+        symptomsafter.append(request.form['sixe'])
+      if 'sevene' in request.form:
+        symptomsafter.append(request.form['sevene'])
+      if 'eighte' in request.form:
+        symptomsafter.append(request.form['eighte'])
+      if 'ninee' in request.form:
+        symptomsafter.append(request.form['ninee'])
+      if 'tene' in request.form:
+        symptomsafter.append(request.form['tene'])
+      if 'elevene' in request.form:
+        symptomsafter.append(request.form['elevene'])
+      if 'twelvee' in request.form:
+        symptomsafter.append(request.form['twelvee'])
+      if 'thirteene' in request.form:
+        symptomsafter.append(request.form['thirteene'])
+      if 'fourteene' in request.form:
+        symptomsafter.append(request.form['fourteene'])
+
+      symptomsbefore = []
+      if 'one' in request.form:
+        symptomsbefore.append(request.form['one'])
+      if 'two' in request.form:
+        symptomsbefore.append(request.form['two'])
+      if 'three' in request.form:
+        symptomsbefore.append(request.form['three'])
+      if 'four' in request.form:
+        symptomsbefore.append(request.form['four'])
+      if 'five' in request.form:
+        symptomsbefore.append(request.form['five'])
+      if 'six' in request.form:
+        symptomsbefore.append(request.form['six'])
+      if 'seven' in request.form:
+        symptomsbefore.append(request.form['seven'])
+      if 'eight' in request.form:
+        symptomsbefore.append(request.form['eight'])
+      if 'nine' in request.form:
+        symptomsbefore.append(request.form['nine'])
+      if 'ten' in request.form:
+        symptomsbefore.append(request.form['ten'])
+      if 'eleven' in request.form:
+        symptomsbefore.append(request.form['eleven'])
+      if 'twelve' in request.form:
+        symptomsbefore.append(request.form['twelve'])
+      if 'thirteen' in request.form:
+        symptomsbefore.append(request.form['thirteen'])
+      if 'fourteen' in request.form:
+        symptomsbefore.append(request.form['fourteen'])
+
+      notes = request.form["notes"]
+      cost = request.form["cost"]
+
+      Info = {"age":age, "height":height, "gender": gender, "blood":blood, "specifics":{"illness":illness, "timeinhos":timeinhos, "medicine":medicine, "symptomsbefore":symptomsbefore, "symptomsafter":symptomsafter, "treatmenttype":treatmenttype, "anesthesiatypes":anesthesiatypes, "Doctor's Notes":notes, "Total Cost":cost}}
+      db.child("Public").child(hospital).child("Treatments").push(Info)
+      return redirect(url_for('login'))
+
+
   return render_template('main.html')
 
 @app.route('/done', methods = ["GET", "POST"])
@@ -74,6 +300,8 @@ def done():
     age = request.form['age']
     
   return render_template('done.html')
+
+
 
 @app.route('/', methods = ["GET","POST"])
 def login():
