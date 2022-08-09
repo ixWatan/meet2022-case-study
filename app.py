@@ -39,7 +39,7 @@ def home():
   error=""
   if request.method == "POST":
     email = request.form["email"]
-    password = request.form["password"]
+    password = request.form["password"] 
     confpass = request.form["confpassword"]
     fname = request.form["fname"]
     staff = request.form["staff"]
@@ -65,6 +65,21 @@ def home():
 
 @app.route('/form', methods = ["GET", "POST"])
 def form():
+
+  if request.method== "POST":
+
+    if request.form.get('pub/priv') == "private":
+      blood = request.form['blood']
+      weight = request.form['weight']
+      illness = request.form['illness']
+      age = request.form['age']
+      height = request.form['height']
+      timeinhos = request.form['timeinhos']
+      gender = request.form.get('gender')
+      medicine = request.form['medicine']
+      hospital = request.form['hospital']
+      doctor = request.form['doctor']
+
   return render_template('main.html')
 
 @app.route('/done', methods = ["GET", "POST"])
@@ -74,6 +89,8 @@ def done():
     age = request.form['age']
     
   return render_template('done.html')
+
+
 
 @app.route('/', methods = ["GET","POST"])
 def login():
